@@ -11,6 +11,7 @@
 .home-container {
   width: min(100% - 30px, 1410px);
   margin-inline: auto;
+  height: 100svh;
 }
 
 .index-container {
@@ -62,4 +63,28 @@ section {
 
 p {
   color: rgb(76, 77, 91);
+}
+
+
+/*----------------------------------------*/
+/* Login-page                             */
+/*----------------------------------------*/
+.picture, aside {
+  min-width: 50%;
+  height: 80%;
+}
+
+.picture {
+  margin: 120px 40px 0 0;
+}
+
+.login-heading {
+  font-size: 42px;
+  font-weight: 500;
+}
+
+.blue {
+  font-family: 'Anton', sans-serif;
+  color: #18c0e4;
+  letter-spacing: 0.6px;
 }
