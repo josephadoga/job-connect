@@ -2,7 +2,7 @@
 
 :root {
   --primary-background: #f8f9fe;
-  --border-radius: 6px;
+  --border-radius: 50px;
   --pointer: pointer;
   --transform: all 0.25s ease-in-out; 
 }
@@ -21,7 +21,11 @@
 
 body {
   font-family: 'Poppins', 'Open Sans', Arial, sans-serif;
-  background-color: #f8f9fe;
+  background-color: var(--primary-background);
+}
+
+main {
+  height: 100svh;
 }
 
 
@@ -45,19 +49,7 @@ body {
   place-items: center;
 }
 
-.gap-20 {
-  gap: 20px;
-}
-
-.gap-30 {
-  gap: 30px;
-}
-
-section {
-  padding: 94px 0 100px 0;
-}
-
-.text, article {
+.text {
   color: rgb(32, 34, 45);
 }
 
@@ -69,17 +61,16 @@ p {
 /*----------------------------------------*/
 /* Login-page                             */
 /*----------------------------------------*/
-.picture, aside {
-  min-width: 50%;
-  height: 80%;
+.picture {
+  width: 90%;
 }
 
-.picture {
-  margin: 120px 40px 0 0;
+.login-content {
+  padding-left: 40px;
 }
 
 .login-heading {
-  font-size: 42px;
+  font-size: 45px;
   font-weight: 500;
 }
 
@@ -87,4 +78,20 @@ p {
   font-family: 'Anton', sans-serif;
   color: #18c0e4;
   letter-spacing: 0.6px;
+}
+
+.login-content p {
+  margin-bottom: 50px;
+}
+
+.email, .password {
+  height: 50px;
+  width: 505px;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.invalid {
+  color: rgb(219, 30, 30);
 }
