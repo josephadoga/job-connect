@@ -17,10 +17,68 @@
     <script src="./assets/script/home.js" defer></script>
   </head>
   <body>
-    <div class="home-container">
-      <header></header>
-      <main></main>
-      <footer></footer>
-    </div>
+    <header class="page-header">
+      <div class="container flex space-between">
+        <div class="logo">
+          <img src="./assets/img/logo.png" class="profile" id="profile">
+        </div>
+        <div class="options">
+          <nav>
+            <ul class="flex gap-15">
+              <li><a href="#">Friends</a></li>
+              <li><a href="#">Pages</a></li>
+              <li><a href="#">Groups</a></li>
+              <li><a href="#">My ads</a></li>
+              <li><a href="#">Settings</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="user-info centerb">
+          <figure>
+            <img src="./assets/img/profile.jpg" class="profile" id="profile">
+          </figure>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="home-container flex space-between">
+        <section class="profile-details">
+          <div class="center">
+            <figure>
+              <img src="./assets/img/profile.jpg" class="profile" id="profile">
+            </figure>
+            <div>
+              <h2>John Doe</h2>
+              <span>UI/UX Designer</span>
+            </div>
+          </div>
+        </section>
+        <div class="post-section">
+          <div class="input-text">
+            <form class="posts-input">
+              <textarea placeholder="What's on your mind today?"></textarea>
+              <div class="flex space-between">
+                <div class="flex">
+                  <label for="file-input">
+                    <i class="fa-solid fa-image"></i>
+                  </label>
+                  <input type="file" id="file-input" accept="image/*" class="post-image">
+                  <p class="file-detail"></p>
+                </div>
+                <div>
+                  <input type="button" class="post" value="Post">
+                </div>
+              </div>
+            </form>
+          </div>
+          <section class="display-post">
+          </section>
+        </div>
+        <aside class="people-section">
+
+        </aside>
+      </div>
+    </main>
+    <footer></footer>
   </body>
 </html>

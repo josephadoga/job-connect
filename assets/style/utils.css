@@ -1,0 +1,58 @@
+:root {
+  --primary-background: #f8f9fe;
+  --secondary-background-color: #fff;
+  --primary-border-radius: 4px;
+  --pointer: pointer;
+  --transform: all 0.25s ease-in-out; 
+}
+
+.container {
+  width: min(100% - 30px, 1080px);
+  margin-inline: auto;
+}
+
+.home-container {
+  width: min(100% - 30px, 1410px);
+  margin-inline: auto;
+  margin-top: 40px;
+}
+
+.index-container {
+  width: min(100% - 30px, 1080px);
+  margin-inline: auto;
+}
+
+body {
+  font-family: 'Poppins', 'Open Sans', Arial, sans-serif;
+  background-color: var(--primary-background);
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+  display: grid;
+  justify-content: center;
+}
+
+.centerb {
+  align-items: center;
+  justify-content: center;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.gap-15 {
+  gap: 15px;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.space-between {
+  justify-content: space-between;
+}
