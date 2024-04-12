@@ -68,31 +68,75 @@ header figure {
 /*---------------------------------------------------------------*/
 
 .profile-details {
-  width: 400px;
+  width: 300px;
+  height: 525px;
   background-color: var(--secondary-background-color);
   border-radius: var(--primary-border-radius);
-  padding: 10px;
+  padding: 30px 0px;
   box-shadow: 1px 1px 2px 1px rgb(0 0 0 / 0.03);
+  text-align: center;
 }
 
+.profile-details h2 {
+  text-align: center;
+}
 
-figure img {
+.profile-details span {
+  color: #C5C6C8;
+}
+
+.profile-details figure img {
   border-radius: 50%;
   height: 150px;
   width: 150px;
   cursor: pointer;
 }
 
+.social-section {
+  display: grid;
+  margin: 30px 0px;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
 
+.connect p, .follow p{
+  font-size: 25px;
+  font-weight: 700;
+}
 
+.social-section div {
+  padding: 20px 0px;
+}
 
+.follow {
+  border-left: 2px solid #d8d8d8;
+}
+.follow, .connect {
+  border-top: 2px solid #d8d8d8;
+  border-bottom: 2px solid #d8d8d8;
+}
+
+.subscribe {
+  margin-top: 10px;
+  border-radius: 50px;
+  padding: 8px 15px;
+  width: 220px;
+  font-weight: 500;
+  background-color: var(--main-color);
+  color: #fff;
+  transition: var(--transition);
+}
+
+.subscribe:hover {
+  background-color: var(--main-hover-color);
+}
 /*---------------------------------------------------------------*/
 /*-------------------Post Section--------------------------------*/
 /*---------------------------------------------------------------*/  
 .input-text {
   padding: 12px;
   height: auto;
-  width: 500px;
+  width: 650px;
   font-size: 17px;
   border-radius: var(--primary-border-radius);
   background-color: var(--secondary-background-color);
@@ -114,13 +158,13 @@ input[type=button], .close {
   height: 35px;
   width: 62px;
   border-radius: 4px;
-  background-color: rgb(20, 103, 248);
+  background-color: var(--main-color);
   cursor: pointer;
   transition: all 0.25s ease-in-out;
 }
 
 input[type=button]:hover, .close:hover {
-  background-color: rgb(38, 117, 253);
+  background-color: var(--main-hover-color);
 
 }
 
@@ -144,20 +188,24 @@ i {
 .file-detail {
   margin: 10px 0 0 5px;
   font-size: 15px;
-  color: #fff;
 }
 
 .display-post {
-  width: 500px;
+  width: 650px;
   transform: rotateX(180deg);
 }
 
 .the-post.data {
   padding: 10px;
   background-color: #fff;
-  border-radius: 4px;
   margin: 20px 0;
   transform: rotateX(180deg);
+  border-radius: var(--primary-border-radius);
+  box-shadow: 1px 1px 2px 1px rgb(0 0 0 / 0.03);
+}
+
+.post-talk {
+  margin: 10px 0px;
 }
 
 .the-post p {
@@ -188,10 +236,32 @@ i {
 /*---------------------------------------------------------------*/
 
 aside {
-  width: 400px;
+  width: 300px;
   height: 300px;
-  padding: 10px;
+  padding: 20px 20px;
   background-color: var(--secondary-background-color);
   border-radius: var(--primary-border-radius);
   box-shadow: 1px 1px 2px 1px rgb(0 0 0 / 0.03);
+}
+
+aside h2 {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+aside img{
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+aside p{
+  font-size: 17px;
+  font-weight: 700;
+}
+
+aside span {
+  color: #C5C6C8;
+  font-size: 15px;
 }

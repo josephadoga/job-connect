@@ -4,6 +4,9 @@
   --primary-border-radius: 4px;
   --pointer: pointer;
   --transform: all 0.25s ease-in-out; 
+  --main-color: #18c0e4;
+  --main-hover-color: #0fabce;
+  --transition: all 0.25s ease-in-out;
 }
 
 .container {
@@ -12,9 +15,9 @@
 }
 
 .home-container {
-  width: min(100% - 30px, 1410px);
+  width: min(100% - 30px, 1300px);
   margin-inline: auto;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .index-container {
