@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+:root {
+  --primary-background: #f8f9fe;
+  --border-radius: 6px;
+  --pointer: pointer;
+  --transform: all 0.25s ease-in-out; 
+}
+
+
+.home-container {
+  width: min(100% - 30px, 1410px);
+  margin-inline: auto;
+}
+
+.index-container {
+  width: min(100% - 30px, 1080px);
+  margin-inline: auto;
+}
+
+body {
+  font-family: 'Poppins', 'Open Sans', Arial, sans-serif;
+  background-color: #f8f9fe;
+}
+
+
+/*----------------------------------------*/
+/* Utilities                              */
+/*----------------------------------------*/
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.center {
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  place-items: center;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.gap-30 {
+  gap: 30px;
+}
+
+section {
+  padding: 94px 0 100px 0;
+}
+
+.text, article {
+  color: rgb(32, 34, 45);
+}
+
+p {
+  color: rgb(76, 77, 91);
+}
