@@ -2,7 +2,8 @@
 
 :root {
   --primary-background: #f8f9fe;
-  --border-radius: 50px;
+  --primary-border-radius: 6px;
+  --button-border-radius: 50px;
   --pointer: pointer;
   --transform: all 0.25s ease-in-out; 
 }
@@ -53,7 +54,7 @@ main {
   color: rgb(32, 34, 45);
 }
 
-p {
+p, .forgot-password a {
   color: rgb(76, 77, 91);
 }
 
@@ -81,7 +82,7 @@ p {
 }
 
 .login-content p {
-  margin-bottom: 50px;
+  margin-bottom: 65px;
 }
 
 .email, .password {
@@ -90,8 +91,61 @@ p {
   padding: 12px;
   margin: 10px 0;
   font-size: 16px;
+  border-radius: var(--primary-border-radius);
 }
 
-.invalid {
-  color: rgb(219, 30, 30);
+.error {
+  font-size: 14px;
+  padding-right: 12px;
+  margin-bottom: -20px;
+}
+
+.invalid.visible {
+  color: rgb(201 29 29);
+}
+
+.forgot-password a {
+  text-decoration: none;
+  transform: var(--transform);
+  cursor: var(--pointer);
+}
+
+.forgot-password a:hover {
+  color: #0fabce;
+}
+
+.button {
+  height: 50px;
+  width: 47%;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: var(--primary-border-radius);
+  cursor: var(--pointer);
+  transform: var(--transform);
+}
+
+.button + .button {
+  margin-left: 15px;
+}
+
+.login {
+  color: #fff;
+  background-color: #18c0e4;
+  border: 1px solid #18c0e4;
+}
+
+.login:hover {
+  background-color: #0fabce;
+  border: 1px solid #0fabce;
+}
+
+.signup {
+  color: #18c0e4;
+  background-color: #fff;
+  border: 1px solid #18c0e4;
+}
+
+.signup:hover {
+  color: #fff;
+  background-color: #18c0e4;
 }
