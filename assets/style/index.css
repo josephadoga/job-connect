@@ -93,6 +93,11 @@ p, .forgot-password a {
   font-size: 16px;
   border-radius: var(--primary-border-radius);
   box-shadow: 0.5px 0.5px 1px #edecec;
+  transform: var(--transform);
+}
+
+.email.focus, .password.focus {
+  border: 1.38px solid #b3b4b9;
 }
 
 .error {
@@ -101,8 +106,15 @@ p, .forgot-password a {
   margin-bottom: -20px;
 }
 
-.invalid.visible {
+.invalid {
+  visibility: hidden;
+  opacity: 0;
   color: #c91d1d;
+}
+
+.invalid.visible {
+  visibility: visible;
+  opacity: 1;
 }
 
 .forgot-password a {
