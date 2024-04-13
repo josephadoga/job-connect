@@ -27,7 +27,7 @@ Random User API: https://randomuser.me
 - [Navjot Kaur](https://github.com/navjot0210)
 
 ## Demo
-Click [here]() to test the application.
+Click [here](https://josephadoga.github.io/job-connect/) to test the application.
 
 Use the following credentials to login:
 
