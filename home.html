@@ -17,10 +17,139 @@
     <script src="./assets/script/home.js" defer></script>
   </head>
   <body>
-    <div class="home-container">
-      <header></header>
-      <main></main>
-      <footer></footer>
-    </div>
+    <header class="page-header">
+      <div class="home-container flex space-between">
+        <div class="logo">
+          <img src="./assets/img/logo.png" class="profile" id="profile">
+        </div>
+        <div class="options">
+          <nav>
+            <ul class="flex gap-30">
+              <div class="search-bar">
+                <input type="search" class="site-search" name="search" placeholder="Search">
+              </div>
+              <li><a href="#">Friends</a></li>
+              <li><a href="#">Pages</a></li>
+              <li><a href="#">Groups</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="#" class="log-out">Log Out</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="user-info centerb">
+          <figure>
+            <img src="./assets/img/profile.jpg" class="profile" id="profile">
+          </figure>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="home-start home-container flex space-between">
+        <section class="profile-details">
+          <div class="center">
+            <figure class="center">
+              <img src="./assets/img/profile.jpg" class="profile" id="profile">
+            </figure>
+            <div>
+              <h2>John Doe</h2>
+              <span>UI/UX Designer</span>
+            </div>
+            <div class="social-section">
+              <div class="connect">
+                <p>800</p>
+                <span>Connections</span>
+              </div>
+              <div class="follow">
+                <p>7.8K</p>
+                <span>Followers</span>
+              </div>
+            </div>
+            <div class="premium">
+              <span>Free access to exclusive tools</span>
+              <button class="subscribe">Subscribe to Premium</button>
+            </div>
+          </div>
+        </section>
+        <div class="post-section">
+          <div class="input-text">
+            <form class="posts-input">
+              <textarea placeholder="What's on your mind today?"></textarea>
+              <div class="flex space-between">
+                <div class="flex">
+                  <label for="file-input">
+                    <i class="fa-solid fa-image"></i>
+                  </label>
+                  <input type="file" id="file-input" accept="image/*" class="post-image">
+                  <p class="file-detail"></p>
+                </div>
+                <div>
+                  <input type="button" class="post" value="Post">
+                </div>
+              </div>
+            </form>
+          </div>
+          <section class="display-post">
+            <div class="the-post data">
+              <header class="post-header flex space-between">
+                <div class="flex gap-15">
+                  <figure>
+                    <img src="./assets/img/profile.jpg" class="profile">
+                  </figure>
+                  <h3>John Doe</h3>
+                </div>
+                <p>
+                  Mar 24 2024
+                </p>
+              </header>
+              <p class="post-talk">
+                🚀 My programming journey has been exhilarating!
+                💻 Each line of code feels like a step forward, unlocking 
+                new possibilities and unleashing creativity. 🔥 #ProgrammingAdventure 
+                #CodeJourney #ExcitingTimes
+              </p>
+              <figure>
+                <img src="./assets/img/coding-glass.jpg" class="posted-image">
+              </figure>
+              <div class="actions flex">
+                <p><i class="fa-regular fa-thumbs-up"></i>  Like</p>
+                <p><i class="fa-solid fa-comment"></i>  Comment</p>
+                <p><i class="fa-solid fa-share-from-square"></i>  Share</p>
+              </div>
+            </div>
+            <div class="the-post data">
+              <header class="post-header flex space-between">
+                <div class="flex gap-15">
+                  <figure>
+                    <img src="./assets/img/navjot.jpg" class="profile">
+                  </figure>
+                  <h3>Navjot Kaur</h3>
+                </div>
+                <p>
+                  Apr 03 2024
+                </p>
+              </header>
+              <p class="post-talk">
+                My journey with JavaScript has been an exhilarating ride! 🚀 
+                From grasping the fundamentals to delving into advanced concepts, 
+                every step has been filled with excitement and curiosity.
+                #JavaScript #ProgrammingAdventure #CodeJourney
+              </p>
+              <figure>
+                <img src="./assets/img/javascript.gif" class="posted-image">
+              </figure>
+              <div class="actions flex">
+                <p><i class="fa-regular fa-thumbs-up"></i>  Like</p>
+                <p><i class="fa-solid fa-comment"></i>  Comment</p>
+                <p><i class="fa-solid fa-share-from-square"></i>  Share</p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <aside class="people-section">
+          <h2>People also viewed</h2>
+        </aside>
+      </div>
+    </main>
+    <footer></footer>
   </body>
 </html>
