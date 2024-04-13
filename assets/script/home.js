@@ -16,6 +16,10 @@ const profileImg = select('.profile');
 const postButton = select('.post');
 const postSection = select('.display-post')
 const textArea = select('textarea');
+const logOut = select('.log-out');
+const userList = select('.userList');
+const peopleSection = select('.people-section');
+
 
 const now = new Date();
 let isVisible = false;
@@ -76,29 +80,66 @@ listen('click', postButton, () => {
   makePost();
   clearInputs();
 });
-/*
+
+listen('click', postButton, () => {
+  makePost();
+  clearInputs();
+});
+
 const options = {
-    method: 'GET',
-    headers: { 'Content-Type': 'application/JSON; charset=UTF-8' },
-    mode: 'cors'
+  method: 'GET',
+  headers: { 'Content-Type': 'application/JSON; charset=UTF-8' },
+  mode: 'cors'
 }
 
 
-const URL = `https://randomuser.me/api/?nat=CA&results=10&seed=same`;
+const Link = `https://randomuser.me/api/?nat=CA&results=10`;
 
 async function getUsers(endpoint) {
-    try {
-        const result = await fetch(endpoint, options);
+  try {
+    const response = await fetch(endpoint, options);
 
-        if(!result.ok) {
-            throw new Error(`${result.statusText} (${result.status})`);
-        }
-
-        const data = await result.json();
-        console.log(data.results);
-    } catch(error) {
-        console.log(error.message);
+    if(!response.ok) {
+      throw new Error(`${response.statusText} (${response.status})`);
     }
+
+    const data = await response.json();
+    return data.results;
+  } catch (error) {
+    console.error(error.message);
+  }
 }
 
-getUsers(URL);*/
+async function setRandomUsers() {
+
+  const users = await getUsers(Link);
+
+  users.forEach(user => {
+    console.log(user.name.last);
+    const newDiv = document.createElement('div');
+    newDiv.className = `user-list flex space-between`;
+    peopleSection.appendChild(newDiv);
+    newDiv.innerHTML = `
+    <div class="flex gap-10">
+      <figure>
+        <img src="${user.picture.medium}" class="profile" id="profile">
+      </figure>
+      <div>
+        <p>${user.name.first} ${user.name.last}</p>
+        <span>${user.location.city}</span>
+      </div>
+    </div>
+    <div class="user-icon">
+      <i class="fas fa-user-plus"></i>
+    </div>
+    `
+  });
+}
+
+listen('load', window, () => {
+  setRandomUsers();
+});
+
+listen('click', logOut, () => {
+  window.location.replace('index.html');
+});
