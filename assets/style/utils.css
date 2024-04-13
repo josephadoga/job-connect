@@ -17,7 +17,6 @@
 .home-container {
   width: min(100% - 30px, 1300px);
   margin-inline: auto;
-  margin-top: 20px;
 }
 
 .index-container {

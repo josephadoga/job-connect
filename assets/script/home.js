@@ -61,8 +61,13 @@ function makePost() {
       </div>
       <p>${now.toDateString().split(' ').slice(1).join(' ')}</p>
     </header>
-    <p>${textArea.value}</p>
+      <p class="post-talk">${textArea.value}</p>
     ${imageSrc}
+    <div class="actions flex">
+      <p><i class="fa-regular fa-thumbs-up"></i>  Like</p>
+      <p><i class="fa-solid fa-comment"></i>  Comment</p>
+      <p><i class="fa-solid fa-share-from-square"></i>  Share</p>
+    </div>
     `
   }
 }
@@ -71,7 +76,7 @@ listen('click', postButton, () => {
   makePost();
   clearInputs();
 });
-
+/*
 const options = {
     method: 'GET',
     headers: { 'Content-Type': 'application/JSON; charset=UTF-8' },
@@ -96,4 +101,4 @@ async function getUsers(endpoint) {
     }
 }
 
-getUsers(URL);
+getUsers(URL);*/
