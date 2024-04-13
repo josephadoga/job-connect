@@ -5,7 +5,7 @@
   --primary-border-radius: 6px;
   --button-border-radius: 50px;
   --pointer: pointer;
-  --transform: all 0.25s ease-in-out; 
+  --transition: all 0.25s ease-in-out; 
 }
 
 
@@ -93,10 +93,10 @@ p, .forgot-password a {
   font-size: 16px;
   border-radius: var(--primary-border-radius);
   box-shadow: 0.5px 0.5px 1px #edecec;
-  transform: var(--transform);
+  transition: var(--transition);
 }
 
-.email.focus, .password.focus {
+.email:focus, .password:focus {
   border: 1.38px solid #b3b4b9;
 }
 
@@ -119,7 +119,7 @@ p, .forgot-password a {
 
 .forgot-password a {
   text-decoration: none;
-  transform: var(--transform);
+  transition: var(--transition);
   cursor: var(--pointer);
 }
 
@@ -132,9 +132,9 @@ p, .forgot-password a {
   width: 47%;
   font-size: 18px;
   font-weight: 600;
-  border-radius: var(--primary-border-radius);
+  border-radius: var(--button-border-radius);
   cursor: var(--pointer);
-  transform: var(--transform);
+  transition: var(--transition);
 }
 
 .button + .button {
@@ -178,5 +178,5 @@ p, .forgot-password a {
   cursor: var(--pointer);
   list-style: none;
   text-decoration: none;
-  transform: var(--transform);
+  transition: var(--transition);
 }

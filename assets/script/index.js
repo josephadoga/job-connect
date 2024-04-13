@@ -1,11 +1,17 @@
 'use strict';
 
-// import * as utils from './utils.js';
+function listen(event, selector, callback) {
+  return selector.addEventListener(event, callback);
+}
+  
+function select(selector) {
+  return document.querySelector(selector);
+}
 
-const login = document.querySelector('.login');
-const signup = document.querySelector('.signup');
-const userEmail = document.querySelector('.email');
-const userPassword = document.querySelector('.password');
+const login = select('.login');
+const signup = select('.signup');
+const userEmail = select('.email');
+const userPassword = select('.password');
 
 
 signup.disabled = true;
@@ -46,7 +52,7 @@ function validateInput(email, password, loginValues) {
 }
 
 function displayMessage(message) {
-  const invalid = document.querySelector('.invalid');
+  const invalid = select('.invalid');
   invalid.innerHTML = `*${message}`;
   invalid.classList.add('visible');
 }
@@ -65,27 +71,27 @@ function validate() {
   }
 }
 
-login.addEventListener('click', () => {
+listen('click', login, () => {
   validate();
 });
 
-window.addEventListener('reload', () => {
+listen('reload', window, () => {
   userEmail.value = '';
   userPassword.value = '';
 });
 
-userEmail.addEventListener('focus', () => {
+listen('focus', userEmail, () => {
   userEmail.classList.add('focus');
 });
 
-userEmail.addEventListener('blur', () => {
+listen('blur', userEmail, () => {
   userEmail.classList.remove('focus');
 });
 
-userPassword.addEventListener('focus', () => {
+listen('focus', userPassword, () => {
   userPassword.classList.add('focus');
 });
 
-userPassword.addEventListener('blur', () => {
+listen('blur', userPassword, () => {
   userPassword.classList.remove('focus');
 });

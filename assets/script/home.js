@@ -1,7 +1,5 @@
 'use strict';
 
-// import { listen, select } from "./utils.js";
-
 function listen(event, selector, callback) {
   return selector.addEventListener(event, callback);
 }
@@ -12,12 +10,10 @@ function select(selector) {
   
 const fileDetail = select('.file-detail');
 const postImage  = select('.post-image');
-const profileImg = select('.profile');
 const postButton = select('.post');
 const postSection = select('.display-post')
 const textArea = select('textarea');
 const logOut = select('.log-out');
-const userList = select('.userList');
 const peopleSection = select('.people-section');
 
 

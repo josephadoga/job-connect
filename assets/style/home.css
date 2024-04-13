@@ -15,14 +15,6 @@
 .logo img {
   width: 180px;
 }
-
-.logo, .user-info {
-  /* width: 40%; */
-}
-  
-.options {
-  /* width: 69.6%; */
-}
   
 nav ul li a {
   font-size: 17px;
